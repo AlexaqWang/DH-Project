@@ -177,6 +177,6 @@ if __name__ == "__main__":
     with open(os.path.join(output_dir, "reddit_for_sentiment_analysis.json"), "w", encoding="utf-8") as f:
         json.dump(sentiment_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Preprocessing complete. Files saved to {output_dir}")
+    print(f" Preprocessing complete. Files saved to {output_dir}")
     print(f"Topic modeling data: {len(topic_data)} entries")
     print(f"Sentiment analysis data: {len(sentiment_data)} entries")
