@@ -5,12 +5,13 @@ from tqdm import tqdm
 from prawcore.exceptions import RequestException, ResponseException, TooManyRequests
 from datetime import datetime
 
-REDDIT_API = {
-    "client_id": "3OELEsILY2JEiOst4iKU_w",
-    "client_secret": "gLXt5rq2i-li7-kwSaEoOt55nTzR4Q",
-    "user_agent": "ALEXANH"
-}
+load_dotenv()  
 
+REDDIT_API = {
+    "client_id": os.getenv("REDDIT_CLIENT_ID"),
+    "client_secret": os.getenv("REDDIT_CLIENT_SECRET"),
+    "user_agent": os.getenv("REDDIT_USER_AGENT")
+}
 SAVE_PATH = "data-collection/reddit_threebody_filtered1.json"
 EXCLUDED_FLAIRS = {"Discussion - TV Series", "Meme", "News"}
 
